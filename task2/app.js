@@ -1,21 +1,25 @@
 const http = require('http');
-const student = require("./views/student");
-const home = require("./views/home");
+const routes = require('./routes/index');
 const PORT = 3001;
 
 
 const server = http.createServer((req, res) => {
-
-    res.writeHead(200, { 'Content-Type': 'text/html' });
-
     if (req.url === '/') {
-        const htmlContent = home.renderPage()
-        res.end(htmlContent);
+        routes.handleHome(req, res);
     } else if (req.url === '/student') {
-        const htmlContent = student.renderPage()
-        res.end(htmlContent);
+        routes.handleStudent(req, res);
     } else {
-        res.end('Not Found\n');
+        res.writeHead(404, { 'Content-Type': 'text/html' });
+        res.end(`
+        <html>
+        <head>
+          <title>Error</title>
+        </head>
+        <body>
+          <p>EROR 404</p>
+        </body>
+      </html>
+        `);
     }
 });
 

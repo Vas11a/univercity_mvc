@@ -6,7 +6,7 @@ const renderPage = () => {
                 <metaname="viewport"content="width=device-width, initial-scale=1.0">
                 <title>HOME.js</title>
                 <body>
-                <form>
+                <form action="/student" method="post">
                     <h1>Form</h1>
                     <input placeholder="name" name="name" type="text">
                     <input placeholder="age" name="age" type="text">
@@ -17,6 +17,7 @@ const renderPage = () => {
                     </select>
                     <input placeholder="albom number" name="code" type="number">
                     <input placeholder="direction" name="study-field" type="text">
+                    <button type="submit">Submit</button>
                 </form>
                     
                 </body>
