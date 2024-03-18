@@ -16,7 +16,7 @@ const renderPage = () => {
                         <option value="other">Other</option>
                     </select>
                     <input placeholder="albom number" name="code" type="number">
-                    <input placeholder="direction" name="study-field" type="text">
+                    <input placeholder="direction" name="studyField" type="text">
                     <button type="submit">Submit</button>
                 </form>
                     

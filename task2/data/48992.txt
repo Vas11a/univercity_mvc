@@ -1,0 +1,5 @@
+name: Vasyl
+age: 123
+gender: other
+code: 48992
+studyField: ggvp
