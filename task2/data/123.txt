@@ -1,5 +1,0 @@
-name: dsdssd
-age: 
-gender: female
-code: 123
-studyField: 
