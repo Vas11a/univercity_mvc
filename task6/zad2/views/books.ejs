@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista książek</title>
+</head>
+<body>
+    <%- include('partials/navigation.ejs') %>
+
+    <h1>Lista książek</h1>
+    
+    <% if (books.length === 0) { %>
+        <p>No books has been found</p>
+    <% } else { %>
+        <ul>
+            <% books.forEach(book => { %>
+                <li><%= book.title %> - <%= book.publishingYear %></li>
+            <% }) %>
+        </ul>
+    <% } %>
+</body>
+</html>
